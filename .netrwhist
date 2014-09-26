@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/home/nadams/git/mf/ads/advertisers/mockups/itau/300x250_radio'
+let g:netrw_dirhist_2='/home/nadams/git/mf/fire_server/config'
+let g:netrw_dirhist_3='/home/nadams/git/mf/ads'
+let g:netrw_dirhist_4='/home/nadams/git/mf/ads/advertisers'
+let g:netrw_dirhist_5='/home/nadams/git/mf/ads/advertisers/polaris_snow'
+let g:netrw_dirhist_6='/home/nadams/git/mf/ads/advertisers/polaris_snow/rias'
+let g:netrw_dirhist_7='/home/nadams/git/mf/ads/advertisers/polaris_snow/rias/ria664751'
