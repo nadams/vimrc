@@ -192,7 +192,7 @@ set tm=500
 set foldcolumn=1
 "set foldmethod=syntax
 
-set mouse=a
+"set mouse=a
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
