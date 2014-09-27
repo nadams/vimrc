@@ -200,6 +200,10 @@ set mouse=a
 
 "set t_Co=256
 
+""""" Kolor Settings """""
+let g:kolor_underlined=1
+let g:kolor_alternative_matchparen=1
+
 " Enable syntax highlighting
 syntax enable 
 
