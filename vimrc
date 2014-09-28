@@ -78,8 +78,6 @@ Bundle 'git@github.com:dag/vim-fish.git'
 
 Plugin 'git@github.com:flazz/vim-colorschemes.git'
 
-Bundle 'ntpeters/vim-better-whitespace'
-
 Bundle 'git@github.com:vim-scripts/Smart-Tabs.git'
 
 Bundle 'fatih/vim-go'
