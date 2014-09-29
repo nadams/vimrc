@@ -293,6 +293,10 @@ map <C-e> <C-W>J
 map <C-i> <C-W>K
 map <C-n> <C-W>H
 map <C-o> <C-W>L
+map <C-h> <C-W>r
+map <C-H> <C-W>R
+map <C-l> <C-W>n
+map <C-k> <C-W>q
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
