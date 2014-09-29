@@ -260,6 +260,11 @@ set si "Smart indent
 set wrap "Wrap lines
 set nowrap
 
+map OA <up>
+map OB <down>
+map OC <right>
+map OD <left>
+
 """"""""""""""""""""""""""""""
 " => Visual mode related
 """"""""""""""""""""""""""""""
@@ -283,11 +288,11 @@ map <c-space> ?
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
-" Smart way to move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
-map <C-h> <C-W>h
-map <C-l> <C-W>l
+" Smart way to move windows
+map <C-e> <C-W>J
+map <C-i> <C-W>K
+map <C-n> <C-W>H
+map <C-o> <C-W>L
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
@@ -303,6 +308,7 @@ nnoremap to  :tablast<CR>
 nnoremap tt  :tabedit<Space>
 nnoremap tm  :tabm<Space>
 nnoremap td  :tabclose<CR>
+
 
 " Switch CWD to the directory of the open buffer
 map <leader>cd :cd %:p:h<cr>:pwd<cr>
