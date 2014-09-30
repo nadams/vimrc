@@ -86,6 +86,8 @@ Bundle 'matze/vim-move'
 
 Bundle 'wookiehangover/jshint.vim'
 
+Bundle 'jlanzarotta/bufexplorer'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -297,6 +299,11 @@ map <C-h> <C-W>r
 map <C-H> <C-W>R
 map <C-l> <C-W>n
 map <C-k> <C-W>q
+
+map = <c-w>+
+map - <c-w>-
+map + <c-w>>
+map _ <c-w><
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
