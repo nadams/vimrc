@@ -316,9 +316,9 @@ nnoremap tn  :tabfirst<CR>
 nnoremap ti  :tabnext<CR>
 nnoremap te  :tabprev<CR>
 nnoremap to  :tablast<CR>
-nnoremap tt  :tabedit<Space>
+nnoremap tl  :tabedit<CR>
 nnoremap tm  :tabm<Space>
-nnoremap td  :tabclose<CR>
+nnoremap tk  :tabclose<CR>
 
 
 " Switch CWD to the directory of the open buffer
