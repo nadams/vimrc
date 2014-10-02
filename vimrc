@@ -88,6 +88,8 @@ Bundle 'wookiehangover/jshint.vim'
 
 Bundle 'jlanzarotta/bufexplorer'
 
+Bundle 'scrooloose/nerdtree'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -524,3 +526,8 @@ vmap <C-Down> <Plug>MoveBlockDown
 vmap <C-Up> <Plug>MoveBlockUp
 nmap <A-Down> <Plug>MoveLineDown
 nmap <A-Up> <Plug>MoveLineUp
+
+
+""""" NerdTREE """""
+autocmd vimenter * NERDTree
+
