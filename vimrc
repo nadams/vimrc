@@ -531,3 +531,7 @@ nmap <A-Up> <Plug>MoveLineUp
 """"" NerdTREE """""
 autocmd vimenter * NERDTree
 
+
+""""" BufExplorer """""
+map <leader>b :BufExplorer<CR>
+
