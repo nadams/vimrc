@@ -202,12 +202,17 @@ set foldcolumn=1
 " => Colemak 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" hnei = arrows
-noremap n gj|noremap e gk|noremap i l|noremap gn j|noremap ge k
+" neio = arrows
+noremap n h
+noremap e gk
+noremap i gj
+noremap o l
+noremap h o
+noremap H O
 " s/S = inSert
 noremap s i|noremap S I
 " k/K = last search
-noremap k n|noremap K N
+noremap m n|noremap M N
 " l/L = BOL / EOL | <c-l> = join lines
 noremap l ^|noremap L $|noremap <C-l> J
 " j/J = end of word
