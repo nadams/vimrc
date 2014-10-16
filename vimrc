@@ -65,7 +65,6 @@ Plugin 'git@github.com:kien/ctrlp.vim.git'
 Bundle 'tacahiroy/ctrlp-funky'
 Bundle 'DavidEGx/ctrlp-smarttabs'
 
-"Plugin 'jelera/vim-javascript-syntax'
 Bundle "pangloss/vim-javascript"
 
 Bundle 'kchmck/vim-coffee-script'
@@ -77,8 +76,6 @@ Bundle 'git@github.com:Valloric/YouCompleteMe.git'
 Bundle 'git@github.com:dag/vim-fish.git'
 
 Plugin 'git@github.com:flazz/vim-colorschemes.git'
-
-Bundle 'git@github.com:vim-scripts/Smart-Tabs.git'
 
 Bundle 'fatih/vim-go'
 
