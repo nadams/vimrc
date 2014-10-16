@@ -195,38 +195,6 @@ set foldcolumn=1
 
 "set mouse=a
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Colemak 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" neio = arrows
-noremap n h
-noremap e gk
-noremap i gj
-noremap o l
-noremap h o
-noremap H O
-" s/S = inSert
-noremap s i|noremap S I
-" k/K = last search
-noremap m n|noremap M N
-" l/L = BOL / EOL | <c-l> = join lines
-noremap l ^|noremap L $|noremap <C-l> J
-" j/J = end of word
-noremap j e|noremap J E
-" _r_ = inneR text objects
-onoremap r i
-" c-e/c-n/c-m or <cr> = High/Low/Mid
-"noremap <c-e> H|noremap <c-n> L|noremap <c-m> M
-" shift+direction switches split panes
-"noremap H <C-W>h|noremap I <C-W>l|noremap N <C-W>j|noremap E <C-W>k
-" c-h/c-i switches tabs [inoremap <c-i> messes up insert-mode tabbing]
-"nnoremap <c-i> <C-PageDown>|nnoremap <c-h> <C-PageUp>
-" U = Redo with U
-noremap U <C-r>
-
-" Not Colemak specific, but I like it :)
-noremap ; :
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -312,9 +280,39 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Treat long lines as break lines (useful when moving around in them)
-map j gj
-map k gk
+
+" neio = arrows
+noremap n h
+noremap e gk
+noremap i gj
+noremap o l
+noremap h o
+noremap H O
+noremap N 0
+noremap O $
+noremap E <C-B>
+noremap I <C-F>
+" s/S = inSert
+noremap s i|noremap S I
+" k/K = last search
+noremap m n|noremap M N
+" l/L = BOL / EOL | <c-l> = join lines
+noremap l ^|noremap L $|noremap <C-l> J
+" j/J = end of word
+noremap j e|noremap J E
+" _r_ = inneR text objects
+onoremap r i
+" c-e/c-n/c-m or <cr> = High/Low/Mid
+"noremap <c-e> H|noremap <c-n> L|noremap <c-m> M
+" shift+direction switches split panes
+"noremap H <C-W>h|noremap I <C-W>l|noremap N <C-W>j|noremap E <C-W>k
+" c-h/c-i switches tabs [inoremap <c-i> messes up insert-mode tabbing]
+"nnoremap <c-i> <C-PageDown>|nnoremap <c-h> <C-PageUp>
+" U = Redo with U
+noremap U <C-r>
+
+" Not Colemak specific, but I like it :)
+noremap ; :
 
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
 map <space> /
