@@ -292,6 +292,11 @@ noremap N 0
 noremap O $
 noremap E <C-B>
 noremap I <C-F>
+
+" f/F = backward word
+noremap f b
+noremap F B
+
 " s/S = inSert
 noremap s i|noremap S I
 " k/K = last search
