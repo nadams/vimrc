@@ -125,7 +125,8 @@ let g:mapleader = ","
 
 " Fast saving
 nmap <leader>w :w!<cr>
-
+nmap <leader>W :w!<cr>
+command W w
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
 " command W w !sudo tee % > /dev/null
@@ -542,6 +543,7 @@ autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 
 """"" CtrlP """""
 map <leader>, :CtrlP<cr>
+nnoremap <Leader>fu :CtrlPFunky<Cr>
 let g:ctrlp_max_files = 0
 let g:ctrlp_follow_symlinks = 1 
 let g:ctrlp_extensions = ['funky']
