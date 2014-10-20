@@ -283,15 +283,15 @@ vnoremap <silent> # :call VisualSelection('b', '')<CR>
 
 " neio = arrows
 noremap n h
-noremap e gk
-noremap i gj
+noremap i gk
+noremap e gj
 noremap o l
 noremap h o
 noremap H O
 noremap N 0
 noremap O $
-noremap E <C-B>
-noremap I <C-F>
+noremap I <C-B>
+noremap E <C-F>
 
 " f/F = backward word
 noremap f b
