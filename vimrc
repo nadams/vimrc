@@ -86,6 +86,9 @@ Bundle 'wookiehangover/jshint.vim'
 Bundle 'jlanzarotta/bufexplorer'
 
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+
+Bundle 'gre/play2vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
