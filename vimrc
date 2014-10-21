@@ -296,6 +296,10 @@ noremap O $
 noremap I <C-B>
 noremap E <C-F>
 
+inoremap <c-n> <c-o>h
+inoremap <c-i> <c-o>gk
+inoremap <c-e> <c-o>gj
+inoremap <c-o> <c-o>l
 " f/F = backward word
 noremap f b
 noremap F B
@@ -330,19 +334,19 @@ map <c-space> ?
 map <silent> <leader><cr> :noh<cr>
 
 " Smart way to move windows
-map <C-e> <C-W>J
-map <C-i> <C-W>K
-map <C-n> <C-W>H
-map <C-o> <C-W>L
-map <C-h> <C-W>r
-map <C-H> <C-W>R
-map <C-l> <C-W>n
-map <C-k> <C-W>q
+noremap <C-e> <C-W>J
+noremap <C-i> <C-W>K
+noremap <C-n> <C-W>H
+noremap <C-o> <C-W>L
+noremap <C-h> <C-W>r
+noremap <C-H> <C-W>R
+noremap <C-l> <C-W>n
+noremap <C-k> <C-W>q
 
-map = <c-w>+
-map - <c-w>-
-map + <c-w>>
-map _ <c-w><
+noremap = <c-w>+
+noremap - <c-w>-
+noremap + <c-w>>
+noremap _ <c-w><
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
