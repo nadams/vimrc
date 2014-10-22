@@ -126,7 +126,6 @@ let g:mapleader = ","
 " Fast saving
 nmap <leader>w :w!<cr>
 nmap <leader>W :w!<cr>
-command W w
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
 " command W w !sudo tee % > /dev/null
@@ -556,7 +555,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 """"" Eclimd """""
-let g:EclimCompletionMethod = 'omnifunc'
+"let g:EclimCompletionMethod = 'omnifunc'
 
 
 """"" Move """""
