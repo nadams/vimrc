@@ -291,7 +291,7 @@ noremap e gj
 noremap o l
 noremap h o
 noremap H O
-noremap N 0
+noremap N ^
 noremap O $
 noremap I <C-B>
 noremap E <C-F>
@@ -325,10 +325,6 @@ noremap U <C-r>
 
 " Not Colemak specific, but I like it :)
 noremap ; :
-
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
