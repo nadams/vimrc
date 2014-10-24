@@ -194,7 +194,8 @@ set tm=500
 
 " Add a bit extra margin to the left
 set foldcolumn=1
-"set foldmethod=syntax
+set foldmethod=syntax
+set foldlevel=99
 
 "set mouse=a
 
@@ -579,7 +580,3 @@ let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
 
-""""" JavaScript """""
-syntax region foldBraces start=/{/ end=/}/ transparent fold keepend extend
-setlocal foldmethod=syntax
-setlocal foldlevel=99
