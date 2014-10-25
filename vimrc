@@ -88,7 +88,7 @@ Bundle 'jlanzarotta/bufexplorer'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 
-Bundle 'gre/play2vim'
+Plugin 'othree/html5.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -194,7 +194,8 @@ set tm=500
 
 " Add a bit extra margin to the left
 set foldcolumn=1
-"set foldmethod=syntax
+set foldmethod=syntax
+set foldlevel=99
 
 "set mouse=a
 
@@ -291,11 +292,15 @@ noremap e gj
 noremap o l
 noremap h o
 noremap H O
-noremap N 0
+noremap N ^
 noremap O $
 noremap I <C-B>
 noremap E <C-F>
 
+inoremap <c-n> <c-o>h
+inoremap <c-i> <c-o>gk
+inoremap <c-e> <c-o>gj
+inoremap <c-o> <c-o>l
 " f/F = backward word
 noremap f b
 noremap F B
@@ -322,27 +327,23 @@ noremap U <C-r>
 " Not Colemak specific, but I like it :)
 noremap ; :
 
-" Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
-
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>
 
 " Smart way to move windows
-map <C-e> <C-W>J
-map <C-i> <C-W>K
-map <C-n> <C-W>H
-map <C-o> <C-W>L
-map <C-h> <C-W>r
-map <C-H> <C-W>R
-map <C-l> <C-W>n
-map <C-k> <C-W>q
+noremap <C-e> <C-W>J
+noremap <C-i> <C-W>K
+noremap <C-n> <C-W>H
+noremap <C-o> <C-W>L
+noremap <C-h> <C-W>r
+noremap <C-H> <C-W>R
+noremap <C-l> <C-W>n
+noremap <C-k> <C-W>q
 
-map = <c-w>+
-map - <c-w>-
-map + <c-w>>
-map _ <c-w><
+noremap = <c-w>+
+noremap - <c-w>-
+noremap + <c-w>>
+noremap _ <c-w><
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
@@ -573,4 +574,9 @@ nmap <silent><leader>nt :NERDTreeToggle<CR>
 
 """"" BufExplorer """""
 map <leader>b :BufExplorer<CR>
+
+""""" YCM """""
+let g:ycm_add_preview_to_completeopt=0
+let g:ycm_confirm_extra_conf=0
+set completeopt-=preview
 
