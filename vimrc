@@ -556,7 +556,7 @@ let g:ctrlp_custom_ignore = {
   \ }
 
 """"" Eclimd """""
-let g:EclimCompletionMethod = 'omnifunc'
+"let g:EclimCompletionMethod = 'omnifunc'
 
 
 """"" Move """""
