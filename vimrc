@@ -217,8 +217,8 @@ syntax enable
 
 try
   colorscheme kolor 
-  hi TabLine      ctermfg=Black  ctermbg=DarkGrey      cterm=NONE
-  hi TabLineFill  ctermfg=Black  ctermbg=DarkGrey      cterm=NONE
+  hi TabLine      ctermfg=Black  ctermbg=Grey      cterm=NONE
+  hi TabLineFill  ctermfg=Black  ctermbg=Grey      cterm=NONE
   hi TabLineSel   ctermfg=Black  ctermbg=White         cterm=NONE
 catch
 endtry
