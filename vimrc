@@ -90,6 +90,8 @@ Bundle 'scrooloose/nerdcommenter'
 
 Plugin 'othree/html5.vim'
 
+Bundle 'mkitt/tabline.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -215,6 +217,9 @@ syntax enable
 
 try
   colorscheme kolor 
+  hi TabLine      ctermfg=Black  ctermbg=DarkGrey      cterm=NONE
+  hi TabLineFill  ctermfg=Black  ctermbg=DarkGrey      cterm=NONE
+  hi TabLineSel   ctermfg=Black  ctermbg=White         cterm=NONE
 catch
 endtry
 
