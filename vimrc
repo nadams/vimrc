@@ -198,7 +198,7 @@ set tm=500
 
 " Add a bit extra margin to the left
 set foldcolumn=1
-set foldmethod=syntax
+set foldmethod=indent
 set foldlevel=99
 
 "set mouse=a
