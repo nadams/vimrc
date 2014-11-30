@@ -94,6 +94,8 @@ Bundle 'mkitt/tabline.vim'
 
 Bundle 'gregsexton/MatchTag'
 
+Bundle 'tpope/vim-fugitive'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -587,3 +589,5 @@ let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
 set completeopt-=preview
 
+""""" Fugitive """""
+autocmd BufReadPost fugitive://* set bufhidden=delete
