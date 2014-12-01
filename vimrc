@@ -354,6 +354,11 @@ noremap - <c-w>-
 noremap + <c-w>>
 noremap _ <c-w><
 
+noremap <C-W>n :wincmd h<CR>
+noremap <C-W>e :wincmd j<CR>
+noremap <C-W>i :wincmd k<CR>
+noremap <C-W>o :wincmd l<CR>
+
 " Close the current buffer
 map <leader>bd :Bclose<cr>
 
