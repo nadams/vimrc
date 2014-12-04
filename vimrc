@@ -335,7 +335,7 @@ set viminfo^=%
 set laststatus=2
 
 " Format the status line
-set statusline=\ %{HasPaste()}%f%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l/%L\ (%P)
+set statusline=\ %{HasPaste()}%f%m%r%h\ %{fugitive#statusline()}\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l/%L\ (%P)
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
