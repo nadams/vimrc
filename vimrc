@@ -493,3 +493,9 @@ set completeopt-=preview
 
 """"" Fugitive """""
 autocmd BufReadPost fugitive://* set bufhidden=delete
+
+
+""""" Go Bindings """""
+nmap <leader>gl :GoLint<CR>
+nmap <leader>gb :GoBuild<CR>
+nmap <leader>gr :GoRun<CR>
