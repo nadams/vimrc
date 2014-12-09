@@ -496,6 +496,6 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 
 
 """"" Go Bindings """""
-nmap <leader>gl :GoLint<CR>
-nmap <leader>gb :GoBuild<CR>
-nmap <leader>gr :GoRun<CR>
+au Filetype go nmap <leader>l :GoLint<CR>
+au Filetype go nmap <leader>b :GoBuild<CR>
+au Filetype go nmap <leader>r :GoRun<CR>
