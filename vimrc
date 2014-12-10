@@ -481,6 +481,14 @@ nmap <A-Up> <Plug>MoveLineUp
 """"" NerdTREE """""
 "autocmd vimenter * NERDTree
 nmap <silent><leader>nt :NERDTreeToggle<CR>
+let g:NERDTreeMapOpenExpl = ''
+let g:NERDTreeMapOpenSplit = 'S'
+let g:NERDTreeMapToggleHidden = 'H'
+let g:NERDTreeMapJumpLastChild = 'E'
+let g:NERDTreeMapJumpFirstChild = 'I'
+let g:NERDTreeMapJumpNextSibling = '<c-e>'
+let g:NERDTreeMapJumpPrevSibling = '<c-i>'
+let g:NERDTreeMapToggleZoom = 'z'
 
 
 """"" BufExplorer """""
