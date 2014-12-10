@@ -390,6 +390,8 @@ map <leader>pp :setlocal paste!<cr>
 
 nmap <leader>ln :set invnumber<CR>
 
+command Q q
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
