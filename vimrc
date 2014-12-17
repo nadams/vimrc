@@ -29,6 +29,7 @@ Plugin 'othree/html5.vim'
 Bundle 'mkitt/tabline.vim'
 Bundle 'gregsexton/MatchTag'
 Bundle 'tpope/vim-fugitive'
+Bundle 'digitaltoad/vim-jade'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
