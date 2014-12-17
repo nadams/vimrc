@@ -30,6 +30,7 @@ Bundle 'mkitt/tabline.vim'
 Bundle 'gregsexton/MatchTag'
 Bundle 'tpope/vim-fugitive'
 Bundle 'digitaltoad/vim-jade'
+Bundle 'vim-ruby/vim-ruby'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -452,8 +453,6 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
-
-autocmd Filetype ruby setlocal ts=2 sts=2 sw=2
 
 """"" CtrlP """""
 map <leader>, :CtrlP<cr>
