@@ -359,14 +359,6 @@ if has("mac") || has("macunix")
   vmap <D-k> <M-k>
 endif
 
-function! StripTrailingWhitespace()
-  let l:winview = winsaveview()
-  silent! %s/\s\+$//
-  call winrestview(l:winview)
-endfunc
-
-autocmd BufWritePre *.{js,scala} call StripTrailingWhitespace()
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
@@ -393,6 +385,14 @@ map <leader>pp :setlocal paste!<cr>
 nmap <leader>ln :set invnumber<CR>
 
 command Q q
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => File Specific
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+autocmd BufWritePre *.{js,scala} call StripTrailingWhitespace()
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
@@ -453,6 +453,13 @@ function! <SID>BufcloseCloseIt()
      execute("bdelete! ".l:currentBufNum)
    endif
 endfunction
+
+function! StripTrailingWhitespace()
+  let l:winview = winsaveview()
+  silent! %s/\s\+$//
+  call winrestview(l:winview)
+endfunc
+
 
 """"" CtrlP """""
 map <leader>, :CtrlP<cr>
