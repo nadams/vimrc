@@ -502,7 +502,7 @@ let g:ctrlp_extensions = ['funky']
 let g:ctrlp_root_markers = ['.ctrlp']
 let g:ctrlp_working_path_mode = ''
 "let g:ctrlp_user_command = 'find %s -type f'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/default_products/*,*/target/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/default_products/*,*/target/*,*/bower_components/*,*/node_modules/*
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]\.(git|hg|svn)$',
   \ }
