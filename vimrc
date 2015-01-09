@@ -31,6 +31,7 @@ Plugin 'gregsexton/MatchTag'
 Plugin 'tpope/vim-fugitive'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'greyblake/vim-preview'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
