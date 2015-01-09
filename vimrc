@@ -417,7 +417,9 @@ map <leader>pp :setlocal paste!<cr>
 
 nmap <leader>ln :set invnumber<CR>
 
-command Q q
+if !exists(":Q") 
+  command Q q
+endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -549,3 +551,7 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 au Filetype go nmap <leader>l :GoLint<CR>
 au Filetype go nmap <leader>gb :GoBuild<CR>
 au Filetype go nmap <leader>r :GoRun<CR>
+
+
+""""" Preview """""
+:nmap <Leader>PP :Preview<CR>
