@@ -251,6 +251,10 @@ inoremap <c-o> <c-o>l
 noremap f b
 noremap F B
 
+" Remap for f -> r / F -> R
+noremap r f
+noremap R F
+
 " s/S = inSert
 noremap s i|noremap S I
 " k/K = last search
