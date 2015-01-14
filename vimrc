@@ -307,6 +307,9 @@ map <leader>bd :Bclose<cr>
 " Close all the buffers
 map <leader>ba :1,1000 bd!<cr>
 
+" Reload all buffers from disk
+map <leader>br :checktime<cr>
+
 " Tab bindings 
 nnoremap tn  :tabfirst<CR>
 nnoremap ti  :tabnext<CR>
