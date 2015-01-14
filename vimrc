@@ -559,7 +559,10 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 au Filetype go nmap <leader>l :GoLint<CR>
 au Filetype go nmap <leader>gb :GoBuild<CR>
 au Filetype go nmap <leader>r :GoRun<CR>
-
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_fmt_command = "goimports"
 
 """"" Preview """""
 :nmap <Leader>PP :Preview<CR>
