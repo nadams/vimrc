@@ -32,6 +32,11 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'greyblake/vim-preview'
+Plugin 'elzr/vim-json'
+Plugin 'XadillaX/json-formatter.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -300,6 +305,7 @@ noremap <C-W>e :wincmd j<CR>
 noremap <C-W>i :wincmd k<CR>
 noremap <C-W>o :wincmd l<CR>
 nnoremap <C-W><C-O> <NOP>
+nnoremap <C-W><C-N> <NOP>
 
 " Close the current buffer
 map <leader>bd :Bclose<cr>
@@ -566,3 +572,6 @@ let g:go_fmt_command = "goimports"
 
 """"" Preview """""
 :nmap <Leader>PP :Preview<CR>
+
+""""" Json """""
+let g:vim_json_syntax_conceal = 0
