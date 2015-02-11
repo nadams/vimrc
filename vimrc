@@ -37,6 +37,7 @@ Plugin 'XadillaX/json-formatter.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
+Plugin 'vim-scripts/dbext.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -77,6 +78,8 @@ nmap <leader>W :w!<cr>
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
 " command W w !sudo tee % > /dev/null
+"
+nmap <leader>r :redraw!<cr>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -146,6 +149,8 @@ set foldmethod=indent
 set foldlevel=99
 
 "set mouse=a
+set ttymouse=xterm2
+set ttyfast
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -324,6 +329,8 @@ nnoremap to  :tablast<CR>
 nnoremap tl  :tabedit<CR>
 nnoremap tm  :tabm<Space>
 nnoremap tk  :tabclose<CR>
+
+map <leader>ff :botright cwindow<cr>
 
 
 " Switch CWD to the directory of the open buffer
@@ -519,9 +526,9 @@ let g:ctrlp_extensions = ['funky']
 let g:ctrlp_root_markers = ['.ctrlp']
 let g:ctrlp_working_path_mode = ''
 "let g:ctrlp_user_command = 'find %s -type f'
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/default_products/*,*/target/*,*/bower_components/*,*/node_modules/*
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/default_products/*,*/target/*,*/bower_components/*,*/node_modules/*,*/GoDeps/_workspace/*
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$|Godeps[\/]_workspace$',
   \ }
 
 """"" Eclimd """""
@@ -565,6 +572,8 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 au Filetype go nmap <leader>l :GoLint<CR>
 au Filetype go nmap <leader>gb :GoBuild<CR>
 au Filetype go nmap <leader>r :GoRun<CR>
+au Filetype go nmap <leader>t :GoTest<CR>
+au Filetype go nmap <leader>at :GoTest ./...<CR>
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
@@ -575,3 +584,7 @@ let g:go_fmt_command = "goimports"
 
 """"" Json """""
 let g:vim_json_syntax_conceal = 0
+
+if filereadable(".vimrc_proj")
+  so .vimrc_proj
+endif
