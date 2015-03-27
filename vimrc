@@ -37,6 +37,7 @@ Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-easytags'
 Plugin 'vim-scripts/dbext.vim'
+Plugin 'chase/vim-ansible-yaml'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
