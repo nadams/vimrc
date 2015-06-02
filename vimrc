@@ -35,10 +35,11 @@ Plugin 'elzr/vim-json'
 Plugin 'XadillaX/json-formatter.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
 Plugin 'vim-scripts/dbext.vim'
 Plugin 'stephpy/vim-yaml'
 Plugin 'chase/vim-ansible-yaml'
+Plugin 'exu/pgsql.vim'
+Plugin 'nsf/gocode', {'rtp': 'vim/'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -594,3 +595,5 @@ let g:vim_json_syntax_conceal = 0
 if filereadable(".vimrc_proj")
   so .vimrc_proj
 endif
+
+let g:sql_type_default = 'pgsql'
