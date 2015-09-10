@@ -21,7 +21,6 @@ Plugin 'dag/vim-fish.git'
 Plugin 'flazz/vim-colorschemes.git'
 Plugin 'fatih/vim-go'
 Plugin 'matze/vim-move'
-Plugin 'wookiehangover/jshint.vim'
 Plugin 'jlanzarotta/bufexplorer'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/nerdcommenter'
@@ -40,6 +39,7 @@ Plugin 'stephpy/vim-yaml'
 Plugin 'chase/vim-ansible-yaml'
 Plugin 'exu/pgsql.vim'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
+Plugin 'mxw/vim-jsx'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -172,7 +172,7 @@ try
   colorscheme kolor 
   hi TabLine      ctermfg=Black  ctermbg=Grey      cterm=NONE
   hi TabLineFill  ctermfg=Black  ctermbg=Grey      cterm=NONE
-  hi TabLineSel   ctermfg=Black  ctermbg=White         cterm=NONE
+  hi TabLineSel   ctermfg=Black  ctermbg=White     cterm=NONE
 catch
 endtry
 
@@ -454,7 +454,7 @@ let @y='gg"+yG'
 " => File Specific
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-autocmd BufWritePre *.{js,scala} call StripTrailingWhitespace()
+autocmd BufWritePre *.{js,scala,go} call StripTrailingWhitespace()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -597,3 +597,8 @@ if filereadable(".vimrc_proj")
 endif
 
 let g:sql_type_default = 'pgsql'
+
+""""" Diff """""
+nmap <silent><leader>wdt :windo diffthis<CR>
+nmap <silent><leader>wdo :windo diffoff<CR>
+nmap <silent><leader>wdu :windo diffupdate<CR>
