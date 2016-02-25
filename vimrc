@@ -40,6 +40,8 @@ Plugin 'chase/vim-ansible-yaml'
 Plugin 'exu/pgsql.vim'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'mxw/vim-jsx'
+Plugin 'lepture/vim-velocity'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -391,7 +393,7 @@ endif
 vnoremap <silent> gv :call VisualSelection('gv')<CR>
 
 " Open vimgrep and put the cursor in the right position
-map <leader>vg :vimgrep // **/*.<left><left><left><left><left><left><left>
+map <leader>vg :vimgrep // **/*.*<left><left><left><left><left><left><left><left>
 
 " Vimgreps in the current file
 map <leader><space> :vimgrep // <C-R>%<C-A><right><right><right><right><right><right><right><right><right>
@@ -454,7 +456,7 @@ let @y='gg"+yG'
 " => File Specific
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-autocmd BufWritePre *.{js,scala,go} call StripTrailingWhitespace()
+autocmd BufWritePre *.{js,scala,go,java,xml,sql} call StripTrailingWhitespace()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -602,3 +604,8 @@ let g:sql_type_default = 'pgsql'
 nmap <silent><leader>wdt :windo diffthis<CR>
 nmap <silent><leader>wdo :windo diffoff<CR>
 nmap <silent><leader>wdu :windo diffupdate<CR>
+
+""""" Java Bindings """""
+au Filetype java nmap <leader>ii :JavaImport<CR>
+au Filetype java nmap <leader>io :JavaImportOrganize<CR>
+
