@@ -36,23 +36,13 @@ Plugin 'chase/vim-ansible-yaml'
 Plugin 'exu/pgsql.vim'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'mxw/vim-jsx'
+Plugin 'leafgarland/typescript-vim'
 "Plugin 'lepture/vim-velocity'
 
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -80,7 +70,6 @@ nmap <leader>W :w!<cr>
 " command W w !sudo tee % > /dev/null
 "
 nmap <leader>r :redraw!<cr>
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
@@ -264,6 +253,7 @@ noremap F B
 " Remap for f -> r / F -> R
 noremap r f
 noremap R F
+noremap k m
 
 " s/S = inSert
 noremap s i|noremap S I
@@ -521,7 +511,6 @@ function! StripTrailingWhitespace()
   call winrestview(l:winview)
 endfunc
 
-
 """"" CtrlP """""
 map <leader>, :CtrlP<cr>
 nnoremap <Leader>fu :CtrlPFunky<Cr>
@@ -567,6 +556,7 @@ map <leader>b :BufExplorer<CR>
 """"" YCM """""
 let g:ycm_add_preview_to_completeopt=0
 let g:ycm_confirm_extra_conf=0
+let g:ycm_server_python_interpreter = '/usr/bin/python3'
 set completeopt-=preview
 
 """"" Fugitive """""
@@ -576,13 +566,17 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 """"" Go Bindings """""
 au Filetype go nmap <leader>l :GoLint<CR>
 au Filetype go nmap <leader>gb :GoBuild<CR>
-au Filetype go nmap <leader>r :GoRun<CR>
+"au Filetype go nmap <leader>r :GoRun<CR>
 au Filetype go nmap <leader>t :GoTest<CR>
 au Filetype go nmap <leader>at :GoTest ./...<CR>
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
-let g:go_highlight_structs = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
 let g:go_fmt_command = "goimports"
+let g:go_term_enabled = 1
+let g:go_list_type = "quickfix"
 
 """"" Preview """""
 :nmap <Leader>PP :Preview<CR>
@@ -604,4 +598,5 @@ nmap <silent><leader>wdu :windo diffupdate<CR>
 """"" Java Bindings """""
 au Filetype java nmap <leader>ii :JavaImport<CR>
 au Filetype java nmap <leader>io :JavaImportOrganize<CR>
+au Filetype java setl sw=4 sts=4 et
 
